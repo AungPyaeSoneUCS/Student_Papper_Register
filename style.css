@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #2b5cb3;
+    --secondary-color: #f4f7f6;
+    --border-color: #ccd1d9;
+    --text-color: #333;
+    --success-color: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #eef2f5;
+    color: var(--text-color);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #ffffff;
+    max-width: 850px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Step Bar Progress Tracker */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border: 3px solid var(--border-color);
+    color: #999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.step span {
+    position: absolute;
+    top: 50px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #777;
+    font-weight: 500;
+}
+
+.step.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.step.active span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Visibility Control for Wizard */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+h3 {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+    color: #444;
+}
+
+/* Layout Elements */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Grid Matrix Tables for Personal Info and History */
+.table-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table th, table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #f8fafc;
+    color: #444;
+}
+
+table input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 4px;
+    font-size: 14px;
+}
+
+table input:focus {
+    background: #f0f4f8;
+}
+
+/* Button mechanics */
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn-next { background: var(--primary-color); color: white; }
+.btn-next:hover { background: #1e448a; }
+.btn-prev { background: #e2e8f0; color: #4a5568; }
+.btn-prev:hover { background: #cbd5e1; }
+.btn-submit { background: var(--success-color); color: white; }
+.btn-submit:hover { background: #27ae60; }
+
+.rules-box {
+    background: #fffaf0;
+    border-left: 4px solid #dd6b20;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.rules-box h4 { margin-bottom: 10px; color: #dd6b20; }
+.rules-box ul { margin-left: 20px; font-size: 14px; line-height: 1.6; }
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.checkbox-group input { margin-top: 4px; }
+
+.margin-top { margin-top: 20px; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
