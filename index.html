@@ -1,187 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCSH Student Admission Form</title>
+    <title>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="form-container">
-    <h2>University of Computer Studies, Hinthada</h2>
-    <p class="subtitle">Student Admission Application Form</p>
-
-    <div class="progress-bar">
-        <div class="step active" id="step1-indicator">1<span>Academic</span></div>
-        <div class="step" id="step2-indicator">2<span>Personal</span></div>
-        <div class="step" id="step3-indicator">3<span>History</span></div>
-        <div class="step" id="step4-indicator">4<span>Declaration</span></div>
+<div class="form-paper">
+    
+    <div class="header-section">
+        <div class="stamp-area">
+            <div class="stamp-circle">တံဆိပ်ခေါင်းနေရာ</div>
+        </div>
+        <div class="title-area">
+            <h2>ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)</h2>
+            <div class="year-line">
+                <input type="text" value="2025" class="inline-input center" style="width: 60px;"> - 
+                <input type="text" value="2026" class="inline-input center" style="width: 60px;"> ပညာသင်နှစ်
+            </div>
+            <h3>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</h3>
+        </div>
+        
+        <div class="photo-upload-container">
+            <div class="photo-preview" id="photoPreview">
+                <span>ဓာတ်ပုံ(၄)ပုံ<br>ကပ်ရန်နေရာ</span>
+            </div>
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            <button type="button" class="photo-btn" onclick="document.getElementById('photoInput').click()">Upload Photo</button>
+        </div>
     </div>
 
-    <form id="multiStepForm">
+    <form id="admissionForm">
         
-        <div class="form-step active" id="step-1">
-            <h3>Step 1: Academic Information</h3>
+        <div class="table-container">
+            <table class="form-table text-left">
+                <tr>
+                    <td style="width: 35%;"><strong>သင်တန်းနှစ် (Course Year)</strong></td>
+                    <td><input type="text" placeholder="ဥပမာ - စတုတ္ထနှစ်"></td>
+                </tr>
+                <tr>
+                    <td><strong>အထူးပြုဘာသာ (Major Subject)</strong></td>
+                    <td><input type="text" placeholder="ဥပမာ - CS / CT"></td>
+                </tr>
+                <tr>
+                    <td><strong>ခုံအမှတ် (Roll No.)</strong></td>
+                    <td><input type="text" placeholder="ဥပမာ - 4CS-18"></td>
+                </tr>
+                <tr>
+                    <td><strong>တက္ကသိုလ်မှတ်ပုံတင်အမှတ် (Uni Reg No.)</strong></td>
+                    <td><input type="text" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td><strong>တက္ကသိုလ်ဝင်ရောက်သည့်ခုနှစ် (Matric Year)</strong></td>
+                    <td><input type="text" placeholder=""></td>
+                </tr>
+            </table>
+        </div>
+
+        <h4 class="section-title">၁။ ပညာဆက်လက်သင်ခွင့်တောင်းခံသူ၏ ကိုယ်ရေးအချက်အလက်များ</h4>
+        <div class="table-container">
+            <table class="form-table matrix-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">အကြောင်းအရာ</th>
+                        <th style="width: 28%;">ကျောင်းသား/သူ (Student)</th>
+                        <th style="width: 26%;">အဖ (Father)</th>
+                        <th style="width: 26%;">အမိ (Mother)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>အမည်<br><span class="en-sub">(Name)</span></strong></td>
+                        <td>
+                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
+                            <input type="text" placeholder="In English">
+                        </td>
+                        <td>
+                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
+                            <input type="text" placeholder="In English">
+                        </td>
+                        <td>
+                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
+                            <input type="text" placeholder="In English">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>လူမျိုး (Race)</strong></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ကိုးကွယ်သည့်ဘာသာ</strong></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>မွေးဖွားရာဇာတိ</strong></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>မြို့နယ်/ပြည်နယ်/တိုင်း</strong></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>မှတ်ပုံတင်အမှတ်<br><span class="en-sub">(NRC No.)</span></strong></td>
+                        <td><input type="text" placeholder="၁၄/ဟသတ(နိုင်)..."></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>နိုင်ငံခြားသား</strong></td>
+                        <td><input type="text" placeholder="တိုင်းရင်းသား/နိုင်ငံခြားသား"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid-row margin-top">
             <div class="form-group">
-                <label for="academicYear">Academic Year (ပညာသင်နှစ်)</label>
-                <input type="text" id="academicYear" placeholder="e.g., 2025-2026" required>
+                <label>မွေးသက္ကရာဇ် (Date of Birth)</label>
+                <input type="date">
             </div>
             <div class="form-group">
-                <label for="courseYear">Year of Course (သင်တန်းနှစ်)</label>
-                <input type="text" id="courseYear" placeholder="e.g., Final Year (B.C.Sc)" required>
-            </div>
-            <div class="form-group">
-                <label for="major">Major Subject (အထူးပြုဘာသာ)</label>
-                <input type="text" id="major" placeholder="e.g., Computer Science" required>
-            </div>
-            <div class="form-group-row">
-                <div class="form-group">
-                    <label for="rollNo">Roll No. (ခုံအမှတ်)</label>
-                    <input type="text" id="rollNo" placeholder="e.g., 4CS-18" required>
-                </div>
-                <div class="form-group">
-                    <label for="regNo">University Reg. No. (တက္ကသိုလ်မှတ်ပုံတင်အမှတ်)</label>
-                    <input type="text" id="regNo" placeholder="e.g., Cu(Hinthada)123">
-                </div>
-            </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-next" onclick="nextStep(1)">Next</button>
+                <label>Email / Address Contacts</label>
+                <input type="email" placeholder="example@gmail.com">
             </div>
         </div>
 
-        <div class="form-step" id="step-2">
-            <h3>Step 2: Personal & Family Details</h3>
-            
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Field</th>
-                            <th>Student (ကျောင်းသား/သူ)</th>
-                            <th>Father (အဖ)</th>
-                            <th>Mother (အမိ)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Name (အမည်)</strong></td>
-                            <td><input type="text" placeholder="Student Name" required></td>
-                            <td><input type="text" placeholder="Father Name" required></td>
-                            <td><input type="text" placeholder="Mother Name" required></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Race/Religion</strong></td>
-                            <td><input type="text" placeholder="Bamar / Buddhist"></td>
-                            <td><input type="text" placeholder="Bamar / Buddhist"></td>
-                            <td><input type="text" placeholder="Bamar / Buddhist"></td>
-                        </tr>
-                        <tr>
-                            <td><strong>NRC Number</strong></td>
-                            <td><input type="text" placeholder="14/HATHA(N)..." required></td>
-                            <td><input type="text" placeholder="14/HATHA(N)..."></td>
-                            <td><input type="text" placeholder="14/HATHA(N)..."></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Birth Place / Town</strong></td>
-                            <td><input type="text" placeholder="Hinthada"></td>
-                            <td><input type="text" placeholder="Hinthada"></td>
-                            <td><input type="text" placeholder="Hinthada"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="form-group margin-top">
-                <label for="dob">Date of Birth (မွေးသက္ကရာဇ်)</label>
-                <input type="date" id="dob" required>
-            </div>
+        <div class="grid-row">
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="example@gmail.com" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Permanent Address (အမြဲတမ်းနေရပ်လိပ်စာ)</label>
-                <textarea id="address" rows="3" placeholder="Enter full address..." required></textarea>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-prev" onclick="prevStep(2)">Previous</button>
-                <button type="button" class="btn btn-next" onclick="nextStep(2)">Next</button>
+                <label>သွေးအုပ်စု (Blood Group)</label>
+                <input type="text" style="width: 100px;" placeholder="A / B / O / AB">
             </div>
         </div>
 
-        <div class="form-step" id="step-3">
-            <h3>Step 3: Passed Examinations (ဖြေဆိုခဲ့သည့်စာမေးပွဲများ)</h3>
-            <p class="help-text">Fill out information for previous years passed at the University.</p>
-            
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Year Layer</th>
-                            <th>Main Subject</th>
-                            <th>Roll Number</th>
-                            <th>Passed Year</th>
-                            <th>Result</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>First Year (ပထမနှစ်)</td>
-                            <td><input type="text" placeholder="CST"></td>
-                            <td><input type="text" placeholder="1CST-15"></td>
-                            <td><input type="number" placeholder="2022"></td>
-                            <td><input type="text" placeholder="Passed"></td>
-                        </tr>
-                        <tr>
-                            <td>Second Year (ဒုတိယနှစ်)</td>
-                            <td><input type="text" placeholder="CS"></td>
-                            <td><input type="text" placeholder="2CS-15"></td>
-                            <td><input type="number" placeholder="2023"></td>
-                            <td><input type="text" placeholder="Passed"></td>
-                        </tr>
-                        <tr>
-                            <td>Third Year (တတိယနှစ်)</td>
-                            <td><input type="text" placeholder="CS"></td>
-                            <td><input type="text" placeholder="3CS-27"></td>
-                            <td><input type="number" placeholder="2024"></td>
-                            <td><input type="text" placeholder="Passed"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="btn-group margin-top">
-                <button type="button" class="btn btn-prev" onclick="prevStep(3)">Previous</button>
-                <button type="button" class="btn btn-next" onclick="nextStep(3)">Next</button>
-            </div>
+        <h4 class="section-title">၂။ ဖြေဆိုခဲ့သည့် စာမေးပွဲများ (University Exam History)</h4>
+        <div class="table-container">
+            <table class="form-table history-table">
+                <thead>
+                    <tr>
+                        <th>အတန်း (Year)</th>
+                        <th>အဓိကဘာသာ</th>
+                        <th>ခုံအမှတ်</th>
+                        <th>ခုနှစ်</th>
+                        <th>အောင်/ရှုံး</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ပထမနှစ် (1st Year)</strong></td>
+                        <td><input type="text" value="CST"></td>
+                        <td><input type="text" placeholder="1CST-.."></td>
+                        <td><input type="text"></td>
+                        <td><input type="text" value="အောင်"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ဒုတိယနှစ် (2nd Year)</strong></td>
+                        <td><input type="text" value="CS"></td>
+                        <td><input type="text" placeholder="2CS-.."></td>
+                        <td><input type="text"></td>
+                        <td><input type="text" value="အောင်"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>တတိယနှစ် (3rd Year)</strong></td>
+                        <td><input type="text" value="CS"></td>
+                        <td><input type="text" placeholder="3CS-.."></td>
+                        <td><input type="text"></td>
+                        <td><input type="text" value="အောင်"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="form-step" id="step-4">
-            <h3>Step 4: Terms, Rules & Acknowledgement</h3>
-            
-            <div class="rules-box">
-                <h4>Rules and Regulations Agreement:</h4>
-                <ul>
-                    <li>The B.C.Sc. / B.C.Tech degree course spans 5 continuous years.</li>
-                    <li>Students must maintain minimum class attendance as outlined by the department.</li>
-                    <li>Any form of academic misconduct or cheating during exams will result in immediate expulsion.</li>
-                    <li>Students must strictly abide by university rules, laws, and ethical standards.</li>
-                </ul>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="agreeTerms" required>
-                <label for="agreeTerms">I hereby certify that all the configuration data written above is correct and true to my knowledge.</label>
-            </div>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-prev" onclick="prevStep(4)">Previous</button>
-                <button type="submit" class="btn btn-submit">Submit Form</button>
-            </div>
+        <div class="action-row">
+            <button type="reset" class="btn-clear">ပုံစံဖျက်မည် (Reset)</button>
+            <button type="submit" class="btn-submit">လျှောက်လွှာတင်မည် (Submit Form)</button>
         </div>
-
     </form>
 </div>
 
