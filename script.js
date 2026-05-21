@@ -2,8 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   initNrcBoxes();
   initAcademicFields();
-  initPhotoUpload();
   initExamHistoryFields();
+  initPhotoUpload();
 
   const form = document.getElementById("admissionForm");
 
@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const invalidNrc = [...document.querySelectorAll(".nrc-box")].some(box => {
-      const numberInput = box.querySelector(".nrc-number");
-      return numberInput.value.trim() !== "" && !box.dataset.fullNrc;
+      const hasValue = [...box.querySelectorAll(".nrc-number-boxes input")]
+        .some(input => input.value.trim() !== "");
+
+      return hasValue && !box.dataset.fullNrc;
     });
 
     if (invalidNrc) {
@@ -20,7 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    alert("Demo Submit Success!");
+    const data = {
+      courseYear: document.getElementById("courseYear").selectedOptions[0].textContent,
+      semester: document.getElementById("semester").value,
+      major: document.getElementById("majorSubject").value,
+      rollNo: document.getElementById("rollPrefix").textContent + document.getElementById("rollNumber").value,
+      bloodGroup: document.getElementById("bloodGroup").value,
+    };
+
+    sessionStorage.setItem("studentFormData", JSON.stringify(data));
+
+    window.location.href = "second/index.html";
   });
 
   form.addEventListener("reset", () => {
