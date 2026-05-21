@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const supporterName = form.elements["supporter_name"].value.trim();
         const phone = form.elements["phone"].value.trim();
 
-        if (supporterName === "" || phone === "") {
-            alert("Please fill out the primary fields (Name and Phone) before proceeding.");
-            return;
-        }
+       // if (supporterName === "" || phone === "") {
+        //    alert("Please fill out the primary fields (Name and Phone) before proceeding.");
+         //   return;
+       // }
 
         // Action: Navigate cleanly to the requested step
         window.location.href = "third/index.html";
