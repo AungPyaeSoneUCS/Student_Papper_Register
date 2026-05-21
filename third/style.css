@@ -1,0 +1,45 @@
+/* Action Button Containers outside form bounds */
+.action-buttons-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* Structural Styles for Interactive Functional Buttons */
+.btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #0033aa;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #002277;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d2d2d2;
+}
+
+/* Ensure operational UI handles are stripped entirely upon printer spooling */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
