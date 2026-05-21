@@ -3,117 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Application Form</title>
+    <title>University Admission Rules and Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="form-container">
-    <form id="applicationForm">
-        <div class="top-section">
-            <div class="row">
-                <span class="label">၃။ ကျောင်းနေရန်အထောက်အပံ့ပြုမည့်ပုဂ္ဂိုလ် (က) အမည်</span>
-                <input type="text" class="line-input text-field" name="supporter_name" placeholder="................................................................................................">
-            </div>
-            <div class="row">
-                <span class="label">(ခ) ဆွေမျိုးတော်စပ်ပုံ</span>
-                <input type="text" class="line-input text-field" name="relationship" placeholder="................................................................................................">
-            </div>
-            <div class="row">
-                <span class="label">(ဂ) အလုပ်အကိုင်</span>
-                <input type="text" class="line-input text-field" name="job" placeholder="................................................................................................">
-            </div>
-            <div class="row">
-                <span class="label">(ဃ) ဆက်သွယ်ရန်လိပ်စာ</span>
-                <input type="text" class="line-input text-field" name="supporter_address" placeholder="................................................................................................">
-            </div>
-            <div class="row no-margin">
-                <span class="label">နှင့် ဖုန်းနံပါတ်</span>
-                <input type="text" class="line-input text-field" name="phone" placeholder="................................................................................................">
-            </div>
-            <div class="row mt-15">
-                <span class="label">၄။ ပညာသင်ထောက်ပံ့ကြေးပေးရန် မေတ္တာရပ်ခံခြင်း ပြု / မပြု</span>
-                <input type="text" class="line-input text-center text-field width-small" name="allowance_request" placeholder="................">
+    <form id="rulesForm">
+        <div class="header-section text-left">
+            <p class="no-margin">ပါမောက္ခချုပ်</p>
+            <p class="no-margin">ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)</p>
+        </div>
+
+        <div class="text-right mt-10">
+            ရက်စွဲ၊ ၂၀<input type="text" class="line-input text-center text-field width-xs" name="date_year" placeholder="    "> ခုနှစ်၊ 
+            <input type="text" class="line-input text-center text-field width-xs" name="date_month" placeholder="    "> လ၊ 
+            <input type="text" class="line-input text-center text-field width-xs" name="date_day" placeholder="    "> ရက်။
+        </div>
+
+        <div class="subject-section mt-15">
+            <div class="flex-row items-start">
+                <span class="label bold-text">အကြောင်းအရာ။</span>
+                <span class="flex-grow bold-text text-underline">ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)တွင် စတုတ္ထနှစ်သင်တန်း တက်ရောက်ခွင့်လျှောက်ထားခြင်း။</span>
             </div>
         </div>
 
-        <div class="commitment-section">
-            <h3 class="section-title">ကိုယ်တိုင်ဝန်ခံချက်</h3>
-            <p class="commitment-text">၁။ အထက်ဖော်ပြပါ အချက်အလတ်အားလုံး မှန်ကန်ပါသည်။</p>
-            <p class="commitment-text">၂။ ဤတက္ကသိုလ်၌ ပညာသင်ဆုတောင်းသည်ကို မိဘ (သို့မဟုတ်) အုပ်ထိန်းသူက သဘောတူပြီး ဖြစ်ရမည်။</p>
-            <p class="commitment-text">၃။ ကျောင်းလခမှန်မှန်ပေးရန် မိဘအုပ်ထိန်းသူက သဘောတူပြီးဖြစ်ပါသည်။</p>
-            <p class="commitment-text">၄။ တက္ကသိုလ်ကျောင်းသားကောင်းပီသစွာ တက္ကသိုလ်/ကောလိပ်အုပ်ချုပ်သည့် စည်းမျဉ်းစည်းကမ်းများနှင့်အညီ လိုက်နာကျင့်သုံးနေထိုင်မည်။</p>
+        <div class="body-text-section mt-15">
+            <p class="indent-p">
+                (၁) ကျွန်တော်/ကျွန်မ <input type="text" class="line-input text-field width-medium" name="student_name" placeholder=".........................................."> သည် ၂၀၂၄ ခုနှစ်၊ 
+                <input type="text" class="line-input text-field width-small" name="exam_month" placeholder="......................"> လအတွင်း ကျင်းပခဲ့သော 
+                တတိယနှစ် / စတုတ္ထနှစ်သင်တန်းစာမေးပွဲကို ခုံအမှတ် <input type="text" class="line-input text-field width-small" name="roll_number" placeholder="......................"> ဖြင့် ဖြေဆိုအောင်မြင်/ကျရှုံးခဲ့ပါသည်။
+            </p>
+            <p class="indent-p">
+                (၂) ၂၀၂၄ - ၂၀၂၅ ပညာသင်နှစ်အတွက် ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)တွင် ဖွင့်လှစ်မည့် စတုတ္ထနှစ်သင်တန်းသို့ တက်ရောက် ခွင့်ပြုပါရန် လျှောက်ထားအပ်ပါသည်။
+            </p>
+            <p class="indent-p">
+                ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)တွင် ပညာသင်ကြားနေစဉ် ကာလအတွင်း ဤတက္ကသိုလ်မှ သတ်မှတ်ထားသည့် အောက်ဖော်ပြပါ အချက်အလက်များကို သိရှိကြောင်းနှင့် လိုက်နာကျင့်သုံးမည်ဖြစ်ကြောင်း ဝန်ခံလက်မှတ်ရေးထိုးပါသည်။
+            </p>
         </div>
 
-        <div class="flex-row items-end mt-20">
-            <div class="date-block">
-                နေ့စွဲ၊ ၂၀<input type="text" class="line-input text-center text-field width-xs" name="year" placeholder="    "> ခုနှစ်၊ 
-                <input type="text" class="line-input text-center text-field width-xs" name="month" placeholder="    "> လ၊ 
-                <input type="text" class="line-input text-center text-field width-xs" name="day" placeholder="    "> ရက်။
-            </div>
-            <div class="signature-block text-center">
-                <div class="signature-space">
-                    <input type="text" class="line-input text-center text-field input-sig" name="signature" placeholder="">
+        <div class="rules-list-section mt-15">
+            <div class="rule-item"><span>(၁)</span><p>B.C.Sc/B.C.Tech သင်တန်းမှာ (၅) နှစ်သင်တန်းဖြစ်ပါသည်။</p></div>
+            <div class="rule-item"><span>(၂)</span><p>သင်တန်းကြေးမှာ တစ်လလျှင် ( ၃၀၀/-) နှုန်းဖြစ်ပါသည်။</p></div>
+            <div class="rule-item"><span>(၃)</span><p>မိမိအစီအစဉ်ဖြင့် နေထိုင်စားသောက်ရမည်ဖြစ်ပါသည်။</p></div>
+            <div class="rule-item"><span>(၄)</span><p>ကျောင်းလခများကို မှန်မှန်ပေးရန် မိဘ(သို့)အုပ်ထိန်းသူများက သဘောတူပြီးဖြစ်ပါသည်။</p></div>
+            <div class="rule-item"><span>(၅)</span><p>ကျောင်းသား/ကျောင်းသူကောင်းတစ်ယောက်ပီသစွာ တက္ကသိုလ်/ကောလိပ်မှချမှတ်မည့် စည်းမျဉ်းစည်းကမ်းများနှင့် အညီလိုက်နာကျင့်သုံးနေထိုင်မည်။</p></div>
+            <div class="rule-item"><span>(၆)</span><p>သတ်မှတ်ထားသော စစ်ဆေးအကဲဖြတ်မှုစနစ်များ၊ အတန်းတက်ရောက်မှုများအရ အောင်/ရှုံးများသတ်မှတ်မည်ကို သိရှိပါသည်။</p></div>
+            <div class="rule-item"><span>(ရ)</span><p>မသမာသော နည်းလမ်းဖြင့် စာမေးပွဲဖြေဆိုခြင်းတွေ့ရှိပါက ကျောင်းမှရာသက်ပန်ထုတ်ပယ်ခြင်း ခံရမည်ကို သိရှိပါသည်။</p></div>
+            <div class="rule-item"><span>(၈)</span><p>ကျောင်းမှထုတ်ပြန်ထားသော ပူးတွဲဖော်ပြပါ စည်းကမ်းချက်များကို ဖတ်ရှုလက်မှတ်ရေးထိုးပြီး လိုက်နာပါမည်ဟု ကတိပြုပါသည်။</p></div>
+        </div>
+
+        <div class="signatures-grid-layout mt-30">
+            <div class="signature-col">
+                <div class="signature-space-block">
+                    <input type="text" class="line-input text-center text-field" name="parent_signature" placeholder="">
                 </div>
-                <p class="signature-label">ပညာသင်ခွင့်လျှောက်ထားသူ၏လက်မှတ်</p>
-            </div>
-        </div>
-
-        <div class="address-box-container">
-            <label class="box-label">ယခုဆက်သွယ်ရန်လိပ်စာ</label>
-            <textarea class="box-textarea text-field" name="current_address" rows="3" placeholder="လိပ်စာအပြည့်အစုံ ဖြည့်သွင်းရန်..."></textarea>
-        </div>
-
-        <div class="divider-text text-right">တက္ကသိုလ်ရုံးစိစစ်ပြီး ..............................................................</div>
-
-        <div class="office-section">
-            <div class="stamp-circle">
-                ဌာန<br>တံဆိပ်တုံး
-            </div>
-            <div class="office-title">တက္ကသိုလ်ရုံးအတွက်</div>
-
-            <div class="office-content">
-                <div class="inner-box">
-                    <div class="row-flex">
-                        <input type="text" class="line-input text-field" name="major" placeholder="......................................................................">
-                        <span>အဓိက</span>
-                    </div>
-                    <div class="dotted-row-label text-center">သာမန်ဘာသာတွဲများ</div>
-                    <div class="dotted-row"><input type="text" class="line-input text-field" name="subject_1" placeholder="......................................................................................"></div>
-                    <div class="dotted-row"><input type="text" class="line-input text-field" name="subject_2" placeholder="......................................................................................"></div>
-                </div>
+                <p class="signature-label text-center bold-text">မိဘ/အုပ်ထိန်းသူလက်မှတ်</p>
                 
-                <div class="office-right-text text-center">
-                    <p>ဖော်ပြပါဘာသာရပ်များဖြင့် ပညာသင်ခွင့်ပြုသည်။</p>
-                    <div class="dean-signature-space">
-                        <p class="dotted-line">.........................................................</p>
-                        <p>ပါမောက္خ/ဌာနမှူး</p>
-                        <p>တံဆိပ်တုံးထုရန်</p>
-                    </div>
+                <div class="row mt-15">
+                    <span class="label">အမည်</span>
+                    <input type="text" class="line-input text-field" name="parent_name" placeholder="......................................................................">
+                </div>
+                <div class="row mt-10">
+                    <span class="label">မှတ်ပုံတင်အမှတ်</span>
+                    <input type="text" class="line-input text-field" name="parent_nrc" placeholder="......................................................................">
+                </div>
+                <div class="row mt-25">
+                    <input type="text" class="line-input text-field" placeholder="..........................................................................................">
                 </div>
             </div>
-        </div>
 
-        <div class="footer-section">
-            <div class="flex-row">
-                <div>ငွေလက်ခံသည့်ဌာန။</div>
-                <div>ငွေသွင်းရန်လိုအပ်သည့်ငွေကြေးများကို လက်ခံရရှိပြီးဖြစ်ပါသည်။</div>
-            </div>
-            
-            <div class="flex-row items-end mt-20">
-                <div>
-                    နေ့စွဲ၊ ၂၀ <span class="dotted-space"></span> ခုနှစ်၊ <span class="dotted-space"></span> လ၊ <span class="dotted-space"></span> ရက်
+            <div class="signature-col">
+                <div class="signature-space-block">
+                    <input type="text" class="line-input text-center text-field" name="student_signature" placeholder="">
                 </div>
-                <div class="text-center">
-                    <p class="dotted-line">.........................................................</p>
-                    <p>ငွေလက်ခံသူ</p>
+                <p class="signature-label text-center bold-text">ပညာသင်ခွင့်လျှောက်ထားသူ၏လက်မှတ်</p>
+                
+                <div class="row mt-15">
+                    <span class="label">အမည်</span>
+                    <input type="text" class="line-input text-field" name="student_name_details" placeholder="......................................................................">
+                </div>
+                <div class="row mt-10">
+                    <span class="label">ယခင်နှစ်ခုံအမှတ်</span>
+                    <input type="text" class="line-input text-field" name="previous_roll_number" placeholder="......................................................................">
+                </div>
+                <div class="row items-start mt-10">
+                    <span class="label">ဆက်သွယ်ရန်လိပ်စာ</span>
+                    <textarea class="box-textarea text-field flex-grow" name="student_contact_address" rows="3" placeholder="လိပ်စာအပြည့်အစုံ ဖြည့်သွင်းရန်..."></textarea>
+                </div>
+                <div class="row mt-10">
+                    <span class="label">ဖုန်းနံပါတ်</span>
+                    <input type="text" class="line-input text-field" name="student_phone" placeholder="......................................................................">
                 </div>
             </div>
         </div>
 
         <div class="action-buttons-container no-print">
-            <button type="button" id="clearBtn" class="btn btn-secondary">Clear Form</button>
-            <button type="submit" id="submitBtn" class="btn btn-primary">Submit & Next</button>
+            <button type="button" id="backBtn" class="btn btn-secondary">Back to Page 2</button>
+            <button type="button" id="clearFormBtn" class="btn btn-danger">Clear</button>
+            <button type="submit" id="finishBtn" class="btn btn-success">Finish & Submit</button>
         </div>
     </form>
 </div>
