@@ -1,45 +1,178 @@
-/* Action Button Containers outside form bounds */
+/* Core Styling Rules matching Page 2 standards */
+body {
+    font-family: 'Pyidaungsu', 'Padauk', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #111;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-container {
+    background-color: #fff;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+/* Utilities */
+.flex-row { display: flex; justify-content: space-between; align-items: center; }
+.flex-grow { flex-grow: 1; }
+.items-start { align-items: flex-start; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.bold-text { font-weight: bold; }
+.text-underline { text-decoration: underline; }
+.no-margin { margin: 0; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-25 { margin-top: 25px; }
+.mt-30 { margin-top: 30px; }
+
+/* Interactive Input Elements Fields Customizing */
+.line-input {
+    border: none;
+    border-bottom: 1px dotted #333;
+    background: transparent;
+    font-size: 14px;
+    padding: 1px 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text-field {
+    color: #0033aa; /* Dynamic User Input simulated ink color */
+}
+
+.width-xs { width: 50px; }
+.width-small { width: 120px; }
+.width-medium { width: 220px; }
+
+/* Content Blocks Structures styling definitions */
+.header-section {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.subject-section {
+    font-size: 14px;
+}
+.subject-section .label {
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.body-text-section p {
+    text-align: justify;
+    line-height: 2;
+    margin: 12px 0;
+}
+.indent-p {
+    text-indent: 40px;
+}
+
+/* Rules list blocks grid styling alignments */
+.rules-list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+}
+.rule-item span {
+    min-width: 35px;
+    display: inline-block;
+    font-weight: bold;
+}
+.rule-item p {
+    margin: 0;
+}
+
+/* Split Column Layout for Client Authorizations */
+.signatures-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+}
+.signature-col {
+    display: flex;
+    flex-direction: column;
+}
+.signature-space-block {
+    height: 40px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
+}
+.signature-space-block input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: cursive, sans-serif;
+    font-size: 16px;
+}
+.signature-label {
+    font-size: 12px;
+    margin: 0 0 15px 0;
+}
+.signature-col .row {
+    display: flex;
+    align-items: flex-end;
+}
+.signature-col .label {
+    white-space: nowrap;
+    padding-right: 8px;
+    font-size: 13px;
+}
+.signature-col .line-input {
+    flex-grow: 1;
+}
+
+/* Notebook lined multi line text box wrapper */
+.box-textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    line-height: 2.2;
+    outline: none;
+    background: repeating-linear-gradient(transparent, transparent 29px, #ccc 29px, #ccc 30px);
+}
+
+/* Control UI Dashboard Panel Actions styles definition elements */
 .action-buttons-container {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
-    border-top: 1px solid #eee;
+    gap: 12px;
+    border-top: 1px solid #ddd;
     padding-top: 20px;
 }
 
-/* Structural Styles for Interactive Functional Buttons */
 .btn {
-    padding: 10px 24px;
+    padding: 10px 22px;
     font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     border: none;
-    transition: background 0.2s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 }
+.btn:hover { opacity: 0.9; }
+.btn-success { background-color: #2e7d32; color: #fff; }
+.btn-secondary { background-color: #757575; color: #fff; }
+.btn-danger { background-color: #d32f2f; color: #fff; }
 
-.btn-primary {
-    background-color: #0033aa;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #002277;
-}
-
-.btn-secondary {
-    background-color: #e0e0e0;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #d2d2d2;
-}
-
-/* Ensure operational UI handles are stripped entirely upon printer spooling */
+/* Printing Adaptability Layer elements overriding hooks */
 @media print {
-    .no-print {
-        display: none !important;
-    }
+    body { background-color: #fff; padding: 0; }
+    .form-container { box-shadow: none; padding: 10px; max-width: 100%; }
+    .no-print { display: none !important; }
+    .text-field::placeholder { color: transparent; }
 }
