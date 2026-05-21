@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNrcBoxes();
   initAcademicFields();
   initPhotoUpload();
+  initExamHistoryFields();
 
   const form = document.getElementById("admissionForm");
 
