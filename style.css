@@ -371,3 +371,39 @@ body {
     border: none !important;
   }
 }
+
+
+/* University Exam History upgraded design */
+.history-table select,
+.history-table input {
+  width: 100%;
+  border: 1px solid #999 !important;
+  background: #fff !important;
+  border-radius: 4px;
+  padding: 7px !important;
+  font-size: 13px;
+  outline: none;
+}
+
+.exam-roll-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exam-roll-row span {
+  min-width: 58px;
+  padding: 7px 6px;
+  border: 1px solid #1e3a8a;
+  border-radius: 4px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+
+.exam-roll-row input {
+  flex: 1;
+  text-align: center;
+}
