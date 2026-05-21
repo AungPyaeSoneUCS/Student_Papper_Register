@@ -58,3 +58,37 @@ function resetAcademicFields() {
   document.getElementById("rollNumber").value = "";
   updateMajorOptions();
 }
+
+
+// Exam History Fields
+
+function initExamHistoryFields() {
+  const currentYear = new Date().getFullYear();
+
+  document.querySelectorAll(".exam-year-select").forEach(select => {
+    select.innerHTML = "";
+
+    for (let year = currentYear - 10; year <= currentYear + 1; year++) {
+      const option = document.createElement("option");
+      option.value = year;
+      option.textContent = year;
+      select.appendChild(option);
+    }
+
+    select.value = currentYear;
+  });
+
+  document.querySelectorAll(".exam-major").forEach(select => {
+    select.addEventListener("change", () => {
+      const year = select.dataset.year;
+      const prefix = select.closest("tr").querySelector(".exam-roll-prefix");
+      prefix.textContent = `${year}${select.value}-`;
+    });
+  });
+
+  document.querySelectorAll(".exam-roll-row input").forEach(input => {
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/[^0-9]/g, "").slice(0, 3);
+    });
+  });
+}
