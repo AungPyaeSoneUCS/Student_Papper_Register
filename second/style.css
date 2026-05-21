@@ -295,3 +295,13 @@ body {
 .btn-danger:hover {
     background-color: #b71c1c;
 }
+
+.btn-print {
+  color: white;
+  background-color: #05ef66;
+  padding: 10px 18px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
