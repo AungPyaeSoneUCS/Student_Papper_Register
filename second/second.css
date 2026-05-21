@@ -1,0 +1,63 @@
+/* file: second/second.css */
+.second-paper {
+  min-height: 900px;
+}
+
+.second-title {
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.top-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.top-info p {
+  border-bottom: 1px dotted #333;
+  padding-bottom: 6px;
+  font-weight: bold;
+}
+
+.paragraph-box {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 25px 10px;
+  line-height: 2;
+  margin-bottom: 35px;
+}
+
+.signature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.line {
+  border-bottom: 1px dotted #333;
+  height: 45px;
+  margin-bottom: 8px;
+}
+
+.box-area {
+  margin-top: 35px;
+}
+
+.note-box {
+  height: 130px;
+  border: 1px solid #333;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .top-info,
+  .signature-row {
+    grid-template-columns: 1fr;
+  }
+}
