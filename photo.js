@@ -1,3 +1,4 @@
+// file: photo.js
 function initPhotoUpload() {
   const photoBtn = document.getElementById("photoBtn");
   const photoInput = document.getElementById("photoInput");

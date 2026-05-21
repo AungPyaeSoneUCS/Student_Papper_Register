@@ -1,3 +1,4 @@
+// file: academic.js
 const yearNames = {
   "1": "First Year",
   "2": "Second Year",
@@ -35,20 +36,11 @@ function updateMajorOptions() {
 }
 
 function updateAcademicPreview() {
-  const courseYear = document.getElementById("courseYear").value;
-  const semester = document.getElementById("semester").value;
-  const major = document.getElementById("majorSubject").value;
   const rollNumber = document.getElementById("rollNumber");
   const rollPrefix = document.getElementById("rollPrefix");
-  const academicPreview = document.getElementById("academicPreview");
 
   rollNumber.value = rollNumber.value.replace(/[^0-9]/g, "").slice(0, 3);
-
-  const prefix = getRollPrefix();
-  rollPrefix.textContent = prefix;
-
-  academicPreview.textContent =
-    `${yearNames[courseYear]} / ${semester} / ${major} / ${prefix}${rollNumber.value}`;
+  rollPrefix.textContent = getRollPrefix();
 }
 
 function initAcademicFields() {
