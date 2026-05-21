@@ -1,0 +1,54 @@
+<!-- file: second/index.html -->
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Second Page</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="second.css" />
+</head>
+<body>
+  <div class="form-paper second-paper">
+    <h3 class="second-title">ပညာသင်ခွင့်လျှောက်ထားသူ၏ ဝန်ခံချက်</h3>
+
+    <div class="top-info">
+      <p>သင်တန်းနှစ် - <span id="showCourseYear"></span></p>
+      <p>Semester - <span id="showSemester"></span></p>
+      <p>အထူးပြုဘာသာ - <span id="showMajor"></span></p>
+      <p>ခုံအမှတ် - <span id="showRollNo"></span></p>
+    </div>
+
+    <div class="paragraph-box">
+      <p>
+        ကျွန်ုပ်သည် တက္ကသိုလ်မှ သတ်မှတ်ထားသော စည်းကမ်းချက်များကို
+        လိုက်နာမည်ဖြစ်ကြောင်း ဝန်ခံပါသည်။
+      </p>
+    </div>
+
+    <div class="signature-row">
+      <div>
+        <div class="line"></div>
+        <p>ကျောင်းသား/သူ လက်မှတ်</p>
+      </div>
+
+      <div>
+        <div class="line"></div>
+        <p>မိဘ/အုပ်ထိန်းသူ လက်မှတ်</p>
+      </div>
+    </div>
+
+    <div class="box-area">
+      <h4>မှတ်ချက်</h4>
+      <div class="note-box"></div>
+    </div>
+
+    <div class="action-row">
+      <button type="button" class="btn-clear" onclick="history.back()">Back</button>
+      <button type="button" class="btn-print" onclick="window.print()">Print</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
