@@ -230,14 +230,20 @@ body {
   outline: none;
 }
 
+/* NRC upgraded layout */
 .nrc-box {
   display: grid;
-  grid-template-columns: 68px 1fr;
-  gap: 5px;
+  gap: 6px;
 }
 
-.nrc-box select,
-.nrc-box input {
+.nrc-line {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+.nrc-box select {
   border: 1px solid #999 !important;
   background: #fff !important;
   border-radius: 4px;
@@ -245,10 +251,21 @@ body {
   font-size: 12px !important;
 }
 
-.nrc-box .nrc-township,
-.nrc-box .nrc-number,
-.nrc-box .nrc-error {
-  grid-column: 1 / -1;
+.nrc-number-boxes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.nrc-number-boxes input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #999 !important;
+  border-radius: 4px;
+  text-align: center;
+  background: #fff !important;
+  font-size: 13px !important;
+  padding: 0 !important;
 }
 
 .nrc-error {
@@ -346,7 +363,7 @@ body {
   }
 
   .nrc-box select,
-  .nrc-box input,
+  .nrc-number-boxes input,
   .course-grid select,
   #majorSubject,
   #bloodGroup,
