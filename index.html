@@ -1,194 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div class="form-paper">
-    
+  <div class="form-paper">
     <div class="header-section">
-        <div class="stamp-area">
-            <div class="stamp-circle">တံဆိပ်ခေါင်းနေရာ</div>
+      <div class="stamp-area">
+        <div class="stamp-circle">တံဆိပ်ခေါင်းနေရာ</div>
+      </div>
+
+      <div class="title-area">
+        <h2>ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)</h2>
+        <div class="year-line">
+          <input type="text" value="2025" class="inline-input center year-input" />
+          -
+          <input type="text" value="2026" class="inline-input center year-input" />
+          ပညာသင်နှစ်
         </div>
-        <div class="title-area">
-            <h2>ကွန်ပျူတာတက္ကသိုလ်(ဟင်္သာတ)</h2>
-            <div class="year-line">
-                <input type="text" value="2025" class="inline-input center" style="width: 60px;"> - 
-                <input type="text" value="2026" class="inline-input center" style="width: 60px;"> ပညာသင်နှစ်
-            </div>
-            <h3>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</h3>
+        <h3>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</h3>
+      </div>
+
+      <div class="photo-upload-container">
+        <div class="photo-preview" id="photoPreview">
+          <span>ဓာတ်ပုံ(၄)ပုံ<br />ကပ်ရန်နေရာ</span>
         </div>
-        
-        <div class="photo-upload-container">
-            <div class="photo-preview" id="photoPreview">
-                <span>ဓာတ်ပုံ(၄)ပုံ<br>ကပ်ရန်နေရာ</span>
-            </div>
-            <input type="file" id="photoInput" accept="image/*" style="display: none;">
-            <button type="button" class="photo-btn" onclick="document.getElementById('photoInput').click()">Upload Photo</button>
-        </div>
+        <input type="file" id="photoInput" accept="image/*" hidden />
+        <button type="button" class="photo-btn" id="photoBtn">Upload Photo</button>
+      </div>
     </div>
 
     <form id="admissionForm">
-        
-        <div class="table-container">
-            <table class="form-table text-left">
-                <tr>
-                    <td style="width: 35%;"><strong>သင်တန်းနှစ် (Course Year)</strong></td>
-                    <td><input type="text" placeholder="ဥပမာ - စတုတ္ထနှစ်"></td>
-                </tr>
-                <tr>
-                    <td><strong>အထူးပြုဘာသာ (Major Subject)</strong></td>
-                    <td><input type="text" placeholder="ဥပမာ - CS / CT"></td>
-                </tr>
-                <tr>
-                    <td><strong>ခုံအမှတ် (Roll No.)</strong></td>
-                    <td><input type="text" placeholder="ဥပမာ - 4CS-18"></td>
-                </tr>
-                <tr>
-                    <td><strong>တက္ကသိုလ်မှတ်ပုံတင်အမှတ် (Uni Reg No.)</strong></td>
-                    <td><input type="text" placeholder=""></td>
-                </tr>
-                <tr>
-                    <td><strong>တက္ကသိုလ်ဝင်ရောက်သည့်ခုနှစ် (Matric Year)</strong></td>
-                    <td><input type="text" placeholder=""></td>
-                </tr>
-            </table>
-        </div>
+      <div class="table-container">
+        <table class="form-table text-left">
+          <tr>
+            <td class="label-col"><strong>သင်တန်းနှစ် (Course Year)</strong></td>
+            <td>
+              <div class="course-grid">
+                <select id="courseYear">
+                  <option value="1">First Year</option>
+                  <option value="2">Second Year</option>
+                  <option value="3">Third Year</option>
+                  <option value="4">Fourth Year</option>
+                  <option value="5">Fifth Year</option>
+                </select>
 
-        <h4 class="section-title">၁။ ပညာဆက်လက်သင်ခွင့်တောင်းခံသူ၏ ကိုယ်ရေးအချက်အလက်များ</h4>
-        <div class="table-container">
-            <table class="form-table matrix-table">
-                <thead>
-                    <tr>
-                        <th style="width: 20%;">အကြောင်းအရာ</th>
-                        <th style="width: 28%;">ကျောင်းသား/သူ (Student)</th>
-                        <th style="width: 26%;">အဖ (Father)</th>
-                        <th style="width: 26%;">အမိ (Mother)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>အမည်<br><span class="en-sub">(Name)</span></strong></td>
-                        <td>
-                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
-                            <input type="text" placeholder="In English">
-                        </td>
-                        <td>
-                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
-                            <input type="text" placeholder="In English">
-                        </td>
-                        <td>
-                            <input type="text" placeholder="မြန်မာဖြင့်"><br>
-                            <input type="text" placeholder="In English">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>လူမျိုး (Race)</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>ကိုးကွယ်သည့်ဘာသာ</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>မွေးဖွားရာဇာတိ</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>မြို့နယ်/ပြည်နယ်/တိုင်း</strong></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>မှတ်ပုံတင်အမှတ်<br><span class="en-sub">(NRC No.)</span></strong></td>
-                        <td><input type="text" placeholder="၁၄/ဟသတ(နိုင်)..."></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>နိုင်ငံခြားသား</strong></td>
-                        <td><input type="text" placeholder="တိုင်းရင်းသား/နိုင်ငံခြားသား"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <select id="semester">
+                  <option value="First Semester">First Semester</option>
+                  <option value="Second Semester">Second Semester</option>
+                </select>
+              </div>
+            </td>
+          </tr>
 
-        <div class="grid-row margin-top">
-            <div class="form-group">
-                <label>မွေးသက္ကရာဇ် (Date of Birth)</label>
-                <input type="date">
-            </div>
-            <div class="form-group">
-                <label>Email / Address Contacts</label>
-                <input type="email" placeholder="example@gmail.com">
-            </div>
-        </div>
+          <tr>
+            <td><strong>အထူးပြုဘာသာ (Major Subject)</strong></td>
+            <td>
+              <select id="majorSubject">
+                <option value="CST">Computer Science and Technology (CST)</option>
+                <option value="CS">Computer Science (CS)</option>
+                <option value="CT">Computer Technology (CT)</option>
+              </select>
+            </td>
+          </tr>
 
-        <div class="grid-row">
-            <div class="form-group">
-                <label>သွေးအုပ်စု (Blood Group)</label>
-                <input type="text" style="width: 100px;" placeholder="A / B / O / AB">
-            </div>
-        </div>
+          <tr>
+            <td><strong>ခုံအမှတ် (Roll No.)</strong></td>
+            <td>
+              <div class="roll-row">
+                <span id="rollPrefix" class="roll-prefix">1CST-</span>
+                <input id="rollNumber" type="text" maxlength="3" placeholder="18" />
+              </div>
+              <small class="helper-text">Roll No. သည် Course Year + Major အလိုက် auto ပြောင်းပါမည်။</small>
+            </td>
+          </tr>
 
-        <h4 class="section-title">၂။ ဖြေဆိုခဲ့သည့် စာမေးပွဲများ (University Exam History)</h4>
-        <div class="table-container">
-            <table class="form-table history-table">
-                <thead>
-                    <tr>
-                        <th>အတန်း (Year)</th>
-                        <th>အဓိကဘာသာ</th>
-                        <th>ခုံအမှတ်</th>
-                        <th>ခုနှစ်</th>
-                        <th>အောင်/ရှုံး</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>ပထမနှစ် (1st Year)</strong></td>
-                        <td><input type="text" value="CST"></td>
-                        <td><input type="text" placeholder="1CST-.."></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" value="အောင်"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>ဒုတိယနှစ် (2nd Year)</strong></td>
-                        <td><input type="text" value="CS"></td>
-                        <td><input type="text" placeholder="2CS-.."></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" value="အောင်"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>တတိယနှစ် (3rd Year)</strong></td>
-                        <td><input type="text" value="CS"></td>
-                        <td><input type="text" placeholder="3CS-.."></td>
-                        <td><input type="text"></td>
-                        <td><input type="text" value="အောင်"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+          <tr>
+            <td><strong>တက္ကသိုလ်မှတ်ပုံတင်အမှတ် (Uni Reg No.)</strong></td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td><strong>တက္ကသိုလ်ဝင်ရောက်သည့်ခုနှစ် (Matric Year)</strong></td>
+            <td><input type="text" /></td>
+          </tr>
+        </table>
+      </div>
 
-        <div class="action-row">
-            <button type="reset" class="btn-clear">ပုံစံဖျက်မည် (Reset)</button>
-            <button type="submit" class="btn-submit">လျှောက်လွှာတင်မည် (Submit Form)</button>
+      <div class="academic-preview">
+        <strong>Academic Preview:</strong>
+        <span id="academicPreview">First Year / First Semester / CST / 1CST-</span>
+      </div>
+
+      <h4 class="section-title">၁။ ပညာဆက်လက်သင်ခွင့်တောင်းခံသူ၏ ကိုယ်ရေးအချက်အလက်များ</h4>
+
+      <div class="table-container">
+        <table class="form-table matrix-table">
+          <thead>
+            <tr>
+              <th>အကြောင်းအရာ</th>
+              <th>ကျောင်းသား/သူ (Student)</th>
+              <th>အဖ (Father)</th>
+              <th>အမိ (Mother)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>အမည်<br /><span class="en-sub">(Name)</span></strong></td>
+              <td><input type="text" placeholder="မြန်မာဖြင့်" /><input type="text" placeholder="In English" /></td>
+              <td><input type="text" placeholder="မြန်မာဖြင့်" /><input type="text" placeholder="In English" /></td>
+              <td><input type="text" placeholder="မြန်မာဖြင့်" /><input type="text" placeholder="In English" /></td>
+            </tr>
+            <tr>
+              <td><strong>လူမျိုး (Race)</strong></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td><strong>ကိုးကွယ်သည့်ဘာသာ</strong></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td><strong>မွေးဖွားရာဇာတိ</strong></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td><strong>မြို့နယ်/ပြည်နယ်/တိုင်း</strong></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td><strong>မှတ်ပုံတင်အမှတ်<br /><span class="en-sub">(NRC No.)</span></strong></td>
+              <td><div class="nrc-box" data-nrc="student"></div></td>
+              <td><div class="nrc-box" data-nrc="father"></div></td>
+              <td><div class="nrc-box" data-nrc="mother"></div></td>
+            </tr>
+            <tr>
+              <td><strong>နိုင်ငံခြားသား</strong></td>
+              <td><input type="text" placeholder="တိုင်းရင်းသား/နိုင်ငံခြားသား" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-row margin-top">
+        <div class="form-group">
+          <label>မွေးသက္ကရာဇ် (Date of Birth)</label>
+          <input type="date" />
         </div>
+        <div class="form-group">
+          <label>Email / Address Contacts</label>
+          <input type="email" placeholder="example@gmail.com" />
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="form-group">
+          <label>သွေးအုပ်စု (Blood Group)</label>
+          <input type="text" class="small-input" placeholder="A / B / O / AB" />
+        </div>
+      </div>
+
+      <h4 class="section-title">၂။ ဖြေဆိုခဲ့သည့် စာမေးပွဲများ (University Exam History)</h4>
+
+      <div class="table-container">
+        <table class="form-table history-table">
+          <thead>
+            <tr>
+              <th>အတန်း (Year)</th>
+              <th>အဓိကဘာသာ</th>
+              <th>ခုံအမှတ်</th>
+              <th>ခုနှစ်</th>
+              <th>အောင်/ရှုံး</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ပထမနှစ် (1st Year)</strong></td>
+              <td><input type="text" value="CST" /></td>
+              <td><input type="text" placeholder="1CST-.." /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" value="အောင်" /></td>
+            </tr>
+            <tr>
+              <td><strong>ဒုတိယနှစ် (2nd Year)</strong></td>
+              <td><input type="text" value="CS / CT" /></td>
+              <td><input type="text" placeholder="2CS / 2CT-.." /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" value="အောင်" /></td>
+            </tr>
+            <tr>
+              <td><strong>တတိယနှစ် (3rd Year)</strong></td>
+              <td><input type="text" value="CS / CT" /></td>
+              <td><input type="text" placeholder="3CS / 3CT-.." /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" value="အောင်" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="demo-preview-card">
+        <strong>Demo NRC Result</strong>
+        <p id="allNrcResult">NRC data will show here.</p>
+      </div>
+
+      <div class="action-row">
+        <button type="reset" class="btn-clear">ပုံစံဖျက်မည် (Reset)</button>
+        <button type="button" class="btn-print" onclick="window.print()">Print</button>
+        <button type="submit" class="btn-submit">Demo Submit</button>
+      </div>
     </form>
-</div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="nrc.js"></script>
+  <script src="academic.js"></script>
+  <script src="photo.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
