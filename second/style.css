@@ -286,3 +286,12 @@ body {
         display: none !important;
     }
 }
+
+/* Color updates for action elements alignment */
+.btn-danger {
+    background-color: #d32f2f;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
