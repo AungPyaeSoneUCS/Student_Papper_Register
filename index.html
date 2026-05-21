@@ -1,12 +1,14 @@
 <!-- file: index.html -->
 <!doctype html>
 <html lang="my">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ကျောင်းသားများပညာသင်ခွင့်လျှောက်ထားလွှာ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="form-paper">
     <div class="header-section">
@@ -139,9 +141,15 @@
 
             <tr>
               <td><strong>မှတ်ပုံတင်အမှတ်<br /><span class="en-sub">(NRC No.)</span></strong></td>
-              <td><div class="nrc-box" data-nrc="student"></div></td>
-              <td><div class="nrc-box" data-nrc="father"></div></td>
-              <td><div class="nrc-box" data-nrc="mother"></div></td>
+              <td>
+                <div class="nrc-box" data-nrc="student"></div>
+              </td>
+              <td>
+                <div class="nrc-box" data-nrc="father"></div>
+              </td>
+              <td>
+                <div class="nrc-box" data-nrc="mother"></div>
+              </td>
             </tr>
 
             <tr>
@@ -183,6 +191,8 @@
         </div>
       </div>
 
+
+      <!-- University Exam History Table -->
       <h4 class="section-title">၂။ ဖြေဆိုခဲ့သည့် စာမေးပွဲများ (University Exam History)</h4>
 
       <div class="table-container">
@@ -200,42 +210,131 @@
           <tbody>
             <tr>
               <td><strong>ပထမနှစ် (1st Year)</strong></td>
-              <td><input type="text" value="CST" /></td>
-              <td><input type="text" placeholder="1CST-.." /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" value="အောင်" /></td>
+              <td>
+                <select>
+                  <option value="CST">CST</option>
+                </select>
+              </td>
+              <td>
+                <div class="exam-roll-row">
+                  <span>1CST-</span>
+                  <input type="text" maxlength="3" placeholder="18" />
+                </div>
+              </td>
+              <td>
+                <select class="exam-year-select"></select>
+              </td>
+              <td>
+                <select>
+                  <option value="အောင်">အောင်</option>
+                  <option value="ရှုံး">ရှုံး</option>
+                  <option value="ဖြေဆိုဆဲ">ဖြေဆိုဆဲ</option>
+                </select>
+              </td>
             </tr>
 
             <tr>
               <td><strong>ဒုတိယနှစ် (2nd Year)</strong></td>
-              <td><input type="text" value="CS / CT" /></td>
-              <td><input type="text" placeholder="2CS / 2CT-.." /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" value="အောင်" /></td>
+              <td>
+                <select class="exam-major" data-year="2">
+                  <option value="CS">CS</option>
+                  <option value="CT">CT</option>
+                </select>
+              </td>
+              <td>
+                <div class="exam-roll-row">
+                  <span class="exam-roll-prefix">2CS-</span>
+                  <input type="text" maxlength="3" placeholder="18" />
+                </div>
+              </td>
+              <td>
+                <select class="exam-year-select"></select>
+              </td>
+              <td>
+                <select>
+                  <option value="အောင်">အောင်</option>
+                  <option value="ရှုံး">ရှုံး</option>
+                  <option value="ဖြေဆိုဆဲ">ဖြေဆိုဆဲ</option>
+                </select>
+              </td>
             </tr>
 
             <tr>
               <td><strong>တတိယနှစ် (3rd Year)</strong></td>
-              <td><input type="text" value="CS / CT" /></td>
-              <td><input type="text" placeholder="3CS / 3CT-.." /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" value="အောင်" /></td>
+              <td>
+                <select class="exam-major" data-year="3">
+                  <option value="CS">CS</option>
+                  <option value="CT">CT</option>
+                </select>
+              </td>
+              <td>
+                <div class="exam-roll-row">
+                  <span class="exam-roll-prefix">3CS-</span>
+                  <input type="text" maxlength="3" placeholder="18" />
+                </div>
+              </td>
+              <td>
+                <select class="exam-year-select"></select>
+              </td>
+              <td>
+                <select>
+                  <option value="အောင်">အောင်</option>
+                  <option value="ရှုံး">ရှုံး</option>
+                  <option value="ဖြေဆိုဆဲ">ဖြေဆိုဆဲ</option>
+                </select>
+              </td>
             </tr>
 
             <tr>
               <td><strong>စတုတ္ထနှစ် (4th Year)</strong></td>
-              <td><input type="text" value="CS / CT" /></td>
-              <td><input type="text" placeholder="4CS / 4CT-.." /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" value="အောင်" /></td>
+              <td>
+                <select class="exam-major" data-year="4">
+                  <option value="CS">CS</option>
+                  <option value="CT">CT</option>
+                </select>
+              </td>
+              <td>
+                <div class="exam-roll-row">
+                  <span class="exam-roll-prefix">4CS-</span>
+                  <input type="text" maxlength="3" placeholder="18" />
+                </div>
+              </td>
+              <td>
+                <select class="exam-year-select"></select>
+              </td>
+              <td>
+                <select>
+                  <option value="အောင်">အောင်</option>
+                  <option value="ရှုံး">ရှုံး</option>
+                  <option value="ဖြေဆိုဆဲ">ဖြေဆိုဆဲ</option>
+                </select>
+              </td>
             </tr>
 
             <tr>
               <td><strong>ပဉ္စမနှစ် (5th Year)</strong></td>
-              <td><input type="text" value="CS / CT" /></td>
-              <td><input type="text" placeholder="5CS / 5CT-.." /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" value="အောင်" /></td>
+              <td>
+                <select class="exam-major" data-year="5">
+                  <option value="CS">CS</option>
+                  <option value="CT">CT</option>
+                </select>
+              </td>
+              <td>
+                <div class="exam-roll-row">
+                  <span class="exam-roll-prefix">5CS-</span>
+                  <input type="text" maxlength="3" placeholder="18" />
+                </div>
+              </td>
+              <td>
+                <select class="exam-year-select"></select>
+              </td>
+              <td>
+                <select>
+                  <option value="အောင်">အောင်</option>
+                  <option value="ရှုံး">ရှုံး</option>
+                  <option value="ဖြေဆိုဆဲ">ဖြေဆိုဆဲ</option>
+                </select>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -254,4 +353,5 @@
   <script src="photo.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
