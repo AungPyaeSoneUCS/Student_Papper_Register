@@ -1,3 +1,4 @@
+/* file: style.css */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,7 +55,6 @@ body {
 
 .title-area h2 {
   font-size: 22px;
-  color: #111;
   margin-bottom: 6px;
 }
 
@@ -133,9 +133,7 @@ body {
   width: 35%;
 }
 
-.form-table input[type="text"],
-.form-table input[type="email"],
-.form-table input[type="date"],
+.form-table input,
 .form-table select {
   width: 100%;
   border: none;
@@ -143,11 +141,6 @@ body {
   padding: 5px;
   font-size: 14px;
   background: transparent;
-}
-
-.form-table input:focus,
-.form-table select:focus {
-  background-color: #f0f7ff;
 }
 
 .matrix-table input[type="text"] {
@@ -186,6 +179,7 @@ body {
 
 .course-grid select,
 #majorSubject,
+#bloodGroup,
 .roll-row input {
   border: 1px solid #999 !important;
   background: white !important;
@@ -210,22 +204,6 @@ body {
   text-align: center;
 }
 
-.helper-text {
-  display: block;
-  margin-top: 5px;
-  color: #666;
-  font-size: 12px;
-}
-
-.academic-preview,
-.demo-preview-card {
-  margin-top: 12px;
-  padding: 12px;
-  border: 1px dashed #888;
-  background: #fafafa;
-  font-size: 14px;
-}
-
 .grid-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -244,21 +222,18 @@ body {
   font-weight: bold;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   padding: 8px;
   border: 1px solid #333;
   font-size: 14px;
   outline: none;
 }
 
-.small-input {
-  max-width: 130px;
-}
-
 .nrc-box {
   display: grid;
-  grid-template-columns: 70px 1fr;
-  gap: 6px;
+  grid-template-columns: 68px 1fr;
+  gap: 5px;
 }
 
 .nrc-box select,
@@ -272,20 +247,8 @@ body {
 
 .nrc-box .nrc-township,
 .nrc-box .nrc-number,
-.nrc-box .nrc-preview,
 .nrc-box .nrc-error {
   grid-column: 1 / -1;
-}
-
-.nrc-preview {
-  padding: 7px;
-  border: 1px dashed #1e3a8a;
-  border-radius: 5px;
-  background: #eff6ff;
-  color: #1e3a8a;
-  font-size: 12px;
-  font-weight: bold;
-  word-break: break-all;
 }
 
 .nrc-error {
@@ -318,9 +281,17 @@ body {
   border-radius: 4px;
 }
 
-.btn-submit { background: #1e3a8a; }
-.btn-clear { background: #ef4444; }
-.btn-print { background: #0f766e; }
+.btn-submit {
+  background: #1e3a8a;
+}
+
+.btn-clear {
+  background: #ef4444;
+}
+
+.btn-print {
+  background: #0f766e;
+}
 
 @media (max-width: 700px) {
   body {
@@ -370,9 +341,7 @@ body {
   }
 
   .action-row,
-  .photo-btn,
-  .demo-preview-card,
-  .academic-preview {
+  .photo-btn {
     display: none !important;
   }
 
@@ -380,6 +349,7 @@ body {
   .nrc-box input,
   .course-grid select,
   #majorSubject,
+  #bloodGroup,
   .roll-row input {
     border: none !important;
   }
