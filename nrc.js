@@ -112,7 +112,7 @@ function createNrcBox(box, label) {
     </select>
     <select class="nrc-township" aria-label="${label} NRC Township"></select>
     <input class="nrc-number" type="text" maxlength="6" placeholder="၁၂၃၄၅၆" inputmode="numeric" />
-    <!-- <div class="nrc-preview"></div> -->
+    <div class="nrc-preview"></div>
     <div class="nrc-error">NRC နံပါတ်သည် ဂဏန်း ၆ လုံးဖြစ်ရမည်။</div>
   `;
 
