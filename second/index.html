@@ -1,54 +1,110 @@
-<!-- file: second/index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="my">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Second Page</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="second.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Application Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-paper second-paper">
-    <h3 class="second-title">ပညာသင်ခွင့်လျှောက်ထားသူ၏ ဝန်ခံချက်</h3>
 
-    <div class="top-info">
-      <p>သင်တန်းနှစ် - <span id="showCourseYear"></span></p>
-      <p>Semester - <span id="showSemester"></span></p>
-      <p>အထူးပြုဘာသာ - <span id="showMajor"></span></p>
-      <p>ခုံအမှတ် - <span id="showRollNo"></span></p>
+<div class="form-container">
+    <div class="top-section">
+        <div class="row">
+            <span class="label">၃။ ကျောင်းနေရန်အထောက်အပံ့ပြုမည့်ပုဂ္ဂိုလ် (က) အမည်</span>
+            <input type="text" class="line-input text-right bold-text" value="ဦးစံရွှေ">
+        </div>
+        <div class="row">
+            <span class="label">(ခ) ဆွေမျိုးတော်စပ်ပုံ</span>
+            <input type="text" class="line-input text-right bold-text" value="ဖခင်">
+        </div>
+        <div class="row">
+            <span class="label">(ဂ) အလုပ်အကိုင်</span>
+            <input type="text" class="line-input text-right bold-text" value="လယ်သမား">
+        </div>
+        <div class="row">
+            <span class="label">(ဃ) ဆက်သွယ်ရန်လိပ်စာ</span>
+            <input type="text" class="line-input text-right bold-text" value="ကံပေါက်ကျေးရွာ၊ ဟင်္သာတမြို့နယ်">
+        </div>
+        <div class="row no-margin">
+            <span class="label">နှင့် ဖုန်းနံပါတ်</span>
+            <input type="text" class="line-input text-right bold-text" value="09-776450965 / 09-797700931">
+        </div>
+        <div class="row mt-15">
+            <span class="label">၄။ ပညာသင်ထောက်ပံ့ကြေးပေးရန် မေတ္တာရပ်ခံခြင်း ပြု / မပြု</span>
+            <input type="text" class="line-input text-center bold-text width-small" value="မပြု">
+        </div>
     </div>
 
-    <div class="paragraph-box">
-      <p>
-        ကျွန်ုပ်သည် တက္ကသိုလ်မှ သတ်မှတ်ထားသော စည်းကမ်းချက်များကို
-        လိုက်နာမည်ဖြစ်ကြောင်း ဝန်ခံပါသည်။
-      </p>
+    <div class="commitment-section">
+        <h3 class="section-title">ကိုယ်တိုင်ဝန်ခံချက်</h3>
+        <p class="commitment-text">၁။ အထက်ဖော်ပြပါ အချက်အလတ်အားလုံး မှန်ကန်ပါသည်။</p>
+        <p class="commitment-text">၂။ ဤတက္ကသိုလ်၌ ပညာသင်ဆုတောင်းသည်ကို မိဘ (သို့မဟုတ်) အုပ်ထိန်းသူက သဘောတူပြီး ဖြစ်ရမည်။</p>
+        <p class="commitment-text">၃။ ကျောင်းလခမှန်မှန်ပေးရန် မိဘအုပ်ထိန်းသူက သဘောတူပြီးဖြစ်ပါသည်။</p>
+        <p class="commitment-text">၄။ တက္ကသိုလ်ကျောင်းသားကောင်းပီသစွာ တက္ကသိုလ်/ကောလိပ်အုပ်ချုပ်သည့် စည်းမျဉ်းစည်းကမ်းများနှင့်အညီ လိုက်နာကျင့်သုံးနေထိုင်မည်။</p>
     </div>
 
-    <div class="signature-row">
-      <div>
-        <div class="line"></div>
-        <p>ကျောင်းသား/သူ လက်မှတ်</p>
-      </div>
-
-      <div>
-        <div class="line"></div>
-        <p>မိဘ/အုပ်ထိန်းသူ လက်မှတ်</p>
-      </div>
+    <div class="flex-row items-end mt-20">
+        <div class="date-block">
+            နေ့စွဲ၊ ၂၀၂၄ ခုနှစ်၊ <input type="text" class="line-input text-center bold-text width-xs" value="၁၁"> လ၊ <input type="text" class="line-input text-center bold-text width-xs" value="၂၆"> ရက်။
+        </div>
+        <div class="signature-block text-center">
+            <div class="signature-space">
+                <span class="handwritten-sig">ဦးစံရွှေ</span>
+            </div>
+            <p class="signature-label">ပညာသင်ခွင့်လျှောက်ထားသူ၏လက်မှတ်</p>
+        </div>
     </div>
 
-    <div class="box-area">
-      <h4>မှတ်ချက်</h4>
-      <div class="note-box"></div>
+    <div class="address-box-container">
+        <label class="box-label">ယခုဆက်သွယ်ရန်လိပ်စာ</label>
+        <textarea class="box-textarea bold-text" rows="3">တာငါး၊ စာသင်ကျောင်းလမ်း၊ (ကြံခင်းကုန်းကျောင်းလမ်း)၊ ဟင်္သာတမြို့နယ်၊ ဧရာဝတီတိုင်းဒေသကြီး။</textarea>
     </div>
 
-    <div class="action-row">
-      <button type="button" class="btn-clear" onclick="history.back()">Back</button>
-      <button type="button" class="btn-print" onclick="window.print()">Print</button>
-    </div>
-  </div>
+    <div class="divider-text text-right">တက္ကသိုလ်ရုံးစိစစ်ပြီး ..............................................................</div>
 
-  <script src="index.js"></script>
+    <div class="office-section">
+        <div class="stamp-circle">
+            ဌာန<br>တံဆိပ်တုံး
+        </div>
+        <div class="office-title">တက္ကသိုလ်ရုံးအတွက်</div>
+
+        <div class="office-content">
+            <div class="inner-box">
+                <div class="dotted-row">...................................................................... အဓိက</div>
+                <div class="dotted-row-label text-center">သာမန်ဘာသာတွဲများ</div>
+                <div class="dotted-row">......................................................................................</div>
+                <div class="dotted-row">......................................................................................</div>
+            </div>
+            
+            <div class="office-right-text text-center">
+                <p>ဖော်ပြပါဘာသာရပ်များဖြင့် ပညာသင်ခွင့်ပြုသည်။</p>
+                <div class="dean-signature-space">
+                    <p class="dotted-line">.........................................................</p>
+                    <p>ပါမောက္ခ/ဌာနမှူး</p>
+                    <p>တံဆိပ်တုံးထုရန်</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <div class="flex-row">
+            <div>ငွေလက်ခံသည့်ဌာန။</div>
+            <div>ငွေသွင်းရန်လိုအပ်သည့်ငွေကြေးများကို လက်ခံရရှိပြီးဖြစ်ပါသည်။</div>
+        </div>
+        
+        <div class="flex-row items-end mt-20">
+            <div>
+                နေ့စွဲ၊ ၂၀ <span class="dotted-space"></span> ခုနှစ်၊ <span class="dotted-space"></span> လ၊ <span class="dotted-space"></span> ရက်
+            </div>
+            <div class="text-center">
+                <p class="dotted-line">.........................................................</p>
+                <p>ငွေလက်ခံသူ</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
