@@ -176,3 +176,13 @@ body {
     .no-print { display: none !important; }
     .text-field::placeholder { color: transparent; }
 }
+
+.btn-print {
+  color: white;
+  background-color: #005122;
+  padding: 10px 18px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
