@@ -12,27 +12,27 @@
     <div class="top-section">
         <div class="row">
             <span class="label">၃။ ကျောင်းနေရန်အထောက်အပံ့ပြုမည့်ပုဂ္ဂိုလ် (က) အမည်</span>
-            <input type="text" class="line-input text-right bold-text" value="ဦးစံရွှေ">
+            <input type="text" class="line-input text-field" placeholder="................................................................................................">
         </div>
         <div class="row">
             <span class="label">(ခ) ဆွေမျိုးတော်စပ်ပုံ</span>
-            <input type="text" class="line-input text-right bold-text" value="ဖခင်">
+            <input type="text" class="line-input text-field" placeholder="................................................................................................">
         </div>
         <div class="row">
             <span class="label">(ဂ) အလုပ်အကိုင်</span>
-            <input type="text" class="line-input text-right bold-text" value="လယ်သမား">
+            <input type="text" class="line-input text-field" placeholder="................................................................................................">
         </div>
         <div class="row">
             <span class="label">(ဃ) ဆက်သွယ်ရန်လိပ်စာ</span>
-            <input type="text" class="line-input text-right bold-text" value="ကံပေါက်ကျေးရွာ၊ ဟင်္သာတမြို့နယ်">
+            <input type="text" class="line-input text-field" placeholder="................................................................................................">
         </div>
         <div class="row no-margin">
             <span class="label">နှင့် ဖုန်းနံပါတ်</span>
-            <input type="text" class="line-input text-right bold-text" value="09-776450965 / 09-797700931">
+            <input type="text" class="line-input text-field" placeholder="................................................................................................">
         </div>
         <div class="row mt-15">
             <span class="label">၄။ ပညာသင်ထောက်ပံ့ကြေးပေးရန် မေတ္တာရပ်ခံခြင်း ပြု / မပြု</span>
-            <input type="text" class="line-input text-center bold-text width-small" value="မပြု">
+            <input type="text" class="line-input text-center text-field width-small" placeholder="................">
         </div>
     </div>
 
@@ -46,11 +46,13 @@
 
     <div class="flex-row items-end mt-20">
         <div class="date-block">
-            နေ့စွဲ၊ ၂၀၂၄ ခုနှစ်၊ <input type="text" class="line-input text-center bold-text width-xs" value="၁၁"> လ၊ <input type="text" class="line-input text-center bold-text width-xs" value="၂၆"> ရက်။
+            နေ့စွဲ၊ ၂၀<input type="text" class="line-input text-center text-field width-xs" placeholder="    "> ခုနှစ်၊ 
+            <input type="text" class="line-input text-center text-field width-xs" placeholder="    "> လ၊ 
+            <input type="text" class="line-input text-center text-field width-xs" placeholder="    "> ရက်။
         </div>
         <div class="signature-block text-center">
             <div class="signature-space">
-                <span class="handwritten-sig">ဦးစံရွှေ</span>
+                <input type="text" class="line-input text-center text-field input-sig" placeholder="">
             </div>
             <p class="signature-label">ပညာသင်ခွင့်လျှောက်ထားသူ၏လက်မှတ်</p>
         </div>
@@ -58,7 +60,7 @@
 
     <div class="address-box-container">
         <label class="box-label">ယခုဆက်သွယ်ရန်လိပ်စာ</label>
-        <textarea class="box-textarea bold-text" rows="3">တာငါး၊ စာသင်ကျောင်းလမ်း၊ (ကြံခင်းကုန်းကျောင်းလမ်း)၊ ဟင်္သာတမြို့နယ်၊ ဧရာဝတီတိုင်းဒေသကြီး။</textarea>
+        <textarea class="box-textarea text-field" rows="3" placeholder="လိပ်စာအပြည့်အစုံ ဖြည့်သွင်းရန်..."></textarea>
     </div>
 
     <div class="divider-text text-right">တက္ကသိုလ်ရုံးစိစစ်ပြီး ..............................................................</div>
@@ -71,10 +73,13 @@
 
         <div class="office-content">
             <div class="inner-box">
-                <div class="dotted-row">...................................................................... အဓိက</div>
+                <div class="row-flex">
+                    <input type="text" class="line-input text-field" placeholder="......................................................................">
+                    <span>အဓိက</span>
+                </div>
                 <div class="dotted-row-label text-center">သာမန်ဘာသာတွဲများ</div>
-                <div class="dotted-row">......................................................................................</div>
-                <div class="dotted-row">......................................................................................</div>
+                <div class="dotted-row"><input type="text" class="line-input text-field" placeholder="......................................................................................"></div>
+                <div class="dotted-row"><input type="text" class="line-input text-field" placeholder="......................................................................................"></div>
             </div>
             
             <div class="office-right-text text-center">
