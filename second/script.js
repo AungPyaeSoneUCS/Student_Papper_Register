@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Go Back Action
     backBtn.addEventListener("click", () => {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     });
 
     // 2. Clear Form Logic
